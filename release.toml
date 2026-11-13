@@ -1,0 +1,18 @@
+name = "skse-hook-inspector"
+display_name = "SKSE Hook Inspector"
+version = "0.3.0"
+description = "Lists which SKSE DLLs hook or rewrite which game functions and flags functions hooked by more than one. Read-only. Needs Skyrim Runtime Extender."
+
+[files]
+"SKSE/Plugins/skyrim-runtime-extender/skse_hook_inspector.dll" = "target/x86_64-pc-windows-msvc/release/skse_hook_inspector.dll"
+
+[nexus]
+mod_id = 0
+file_id = 0
+category = "main"
+mod_category = 39
+archive_existing = true
+update_mod_version = true
+
+[github]
+repo = "kxgcayh/skse-hook-inspector"

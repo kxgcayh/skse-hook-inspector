@@ -1,0 +1,20 @@
+[package]
+name = "hook-inspector"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[lib]
+name = "skse_hook_inspector"
+crate-type = ["cdylib"]
+
+[dependencies]
+hook-inspector-core = { path = "../hook-inspector-core" }
+skse.workspace = true
+versionlib.workspace = true
+framework.workspace = true
+sre.workspace = true
+# Same crate and version epaint 0.37.0 parses fonts with (Cargo.lock holds one copy); used only to pre-check candidate font bytes.
+skrifa = { version = "=0.44.0", default-features = false, features = ["std"] }
+windows-sys = { workspace = true, features = ["Win32_Foundation", "Win32_System_Diagnostics_Debug", "Win32_System_LibraryLoader", "Win32_System_ProcessStatus", "Win32_System_Threading", "Win32_System_Memory"] }

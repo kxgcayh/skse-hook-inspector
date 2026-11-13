@@ -1,0 +1,6 @@
+/target
+/dist
+.DS_Store
+*.snapshot.bin
+*-snapshot.bin
+*-snapshot.json

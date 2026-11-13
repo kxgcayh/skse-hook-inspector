@@ -1,0 +1,24 @@
+[workspace]
+resolver = "3"
+members = ["hook-inspector-core", "hook-inspector"]
+exclude = ["extern"]
+
+[workspace.package]
+edition = "2024"
+version = "0.3.0"
+publish = false
+license = "MPL-2.0-no-copyleft-exception"
+
+[workspace.dependencies]
+skse = { path = "extern/skyrim-rs/crates/skse" }
+versionlib = { path = "extern/skyrim-rs/crates/versionlib" }
+framework = { path = "extern/skyrim-rs/crates/framework" }
+sre = { path = "extern/skyrim-rs/crates/sre", package = "skyrim-sre" }
+windows-sys = "0.61"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
